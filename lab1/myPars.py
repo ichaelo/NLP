@@ -45,7 +45,7 @@ async def fetch_content(url, session):
     async with session.get(url, headers=headers) as response:
         return await response.text()
 
-# Получить URL-страниц со статьями, вид страницы f'{SITE_URL}/{year}/{month}/{day}'
+# Получить URL-страниц со статьями, вид страницы f'{SITE_URL}/news/{year}/{month}/{day}'
 
 async def get_page_urls(session, start_date, finish_date):
     async with session.get(SITE_URL, headers=headers) as response:
